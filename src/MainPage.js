@@ -26,19 +26,39 @@ function MainPage(props) {
                 <AppBar position="static">
                     <Toolbar>
                         <div className={classes.menu_bar_item}>
-                            Ben Dunk
+                            <Button
+                                onClick = {() => props.history.push('/')}
+                            >
+                                Ben Dunk
+                            </Button>
                         </div>
                         <div className={classes.menu_bar_item}>
-                            About
+                            <Button
+                                onClick = {() => props.history.push('/about')}
+                            >
+                                About
+                            </Button>
                         </div>
                         <div className={classes.menu_bar_item}>
-                            Projects
+                            <Button
+                                onClick = {() => props.history.push('/projects')}
+                            >
+                                Projects
+                            </Button>
                         </div>
                         <div className={classes.menu_bar_item}>
-                            Ramblings
+                            <Button
+                                onClick = {() => props.history.push('/ramblings')}
+                            >
+                               Ramblings
+                            </Button>
                         </div>
                         <div className={classes.menu_bar_item}>
-                            Contact
+                            <Button
+                                onClick = {() => props.history.push('/contact')}
+                            >
+                                Contact
+                            </Button>
                         </div>
                     </Toolbar>
                 </AppBar>
