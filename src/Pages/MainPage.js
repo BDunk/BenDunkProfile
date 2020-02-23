@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import TopBar from './Components/TopBar.js'
+import '../App.css';
+import TopBar from '../Components/TopBar.js';
 
 
 function MainPage(props) {
@@ -18,8 +18,3 @@ function MainPage(props) {
 }
 
 export default MainPage;
-
-
-//            <Link to={'./projects'}>
-//                 Go to projects
-//             </Link>

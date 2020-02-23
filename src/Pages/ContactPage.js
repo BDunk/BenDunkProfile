@@ -1,18 +1,17 @@
 import React from 'react';
-import {Button} from "@material-ui/core";
-import TopBar from "./Components/TopBar";
+import TopBar from "../Components/TopBar";
 
-function AboutPage(props) {
+function ContactPage(props) {
     return (
         <div>
             <header>
                 <TopBar />
             </header>
             <body>
-                This is the about page
+            This is the contact page
             </body>
         </div>
     );
 }
 
-export default AboutPage;
+export default ContactPage;

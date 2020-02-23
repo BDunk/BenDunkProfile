@@ -1,9 +1,9 @@
 import React from 'react';
-import MainPage from './MainPage'
-import AboutPage from './AboutPage'
-import ProjectPage from './ProjectPage'
-import RamblingsPage from './RamblingsPage'
-import ContactPage from './ContactPage'
+import MainPage from './Pages/MainPage';
+import AboutPage from './Pages/AboutPage';
+import ProjectPage from './Pages/ProjectPage';
+import RamblingsPage from './Pages/RamblingsPage';
+import ContactPage from './Pages/ContactPage';
 
 
 import {
