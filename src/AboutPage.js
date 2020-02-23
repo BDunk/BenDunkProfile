@@ -1,15 +1,16 @@
 import React from 'react';
 import {Button} from "@material-ui/core";
+import TopBar from "./Components/TopBar";
 
 function AboutPage(props) {
     return (
         <div>
-             This is the about page
-            <Button
-                onClick = {() => props.history.push('/')}
-            >
-                Go to Main
-            </Button>
+            <header>
+                <TopBar />
+            </header>
+            <body>
+                This is the about page
+            </body>
         </div>
     );
 }

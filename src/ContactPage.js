@@ -1,15 +1,16 @@
 import React from 'react';
 import {Button} from "@material-ui/core";
+import TopBar from "./Components/TopBar";
 
 function ContactPage(props) {
     return (
         <div>
-             This is the Contact page
-            <Button
-                onClick = {() => props.history.push('/')}
-            >
-                Go to Main
-            </Button>
+            <header>
+                <TopBar />
+            </header>
+            <body>
+            This is the contact page
+            </body>
         </div>
     );
 }
