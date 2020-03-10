@@ -13,12 +13,14 @@ const useStyles = makeStyles(theme => ({
     root: {
     },
     title: {
-        marginLeft: "40px",
+        marginLeft: "15px",
+        marginRight: "25px",
     },
     menu_bar_item: {
-        marginLeft: "40px",
-        marginRight: "40px",
+        marginLeft: "15px",
+        marginRight: "25px",
     },
+
 }));
 
 
@@ -39,30 +41,35 @@ function TopBar(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <div className={classes.menu_bar_item}>
-                <Button
-                    onClick = {() => props.history.push('/')}
-                >
-                    Ben Dunk
-                </Button>
-            </div>
-
             <div>
-
-
-                <AppBar position="static">
+                <AppBar
+                    position="static"
+                    style={{ background: '#482e55' }}
+                >
                     <Toolbar>
+                        <div className={classes.title}>
+                            <Button
+                                onClick = {() => props.history.push('/')}
+                                style={{ fontSize: '20px', color: '#FFFFFF' }}
+                            >
+                                Ben Dunk
+                            </Button>
+                        </div>
 
                         <div className={classes.menu_bar_item}>
                             <Button
                                 onClick = {() => props.history.push('/about')}
+                                style={{color: '#FFFFFF' }}
                             >
                                 About
                             </Button>
                         </div>
                         <div className={classes.menu_bar_item}>
-                            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                                Open Menu
+                            <Button
+                                aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}
+                                style={{color: '#FFFFFF' }}
+                            >
+                                Projects
                             </Button>
                             <Menu
                                 id="simple-menu"
@@ -79,6 +86,7 @@ function TopBar(props) {
                         <div className={classes.menu_bar_item}>
                             <Button
                                 onClick = {() => props.history.push('/contact')}
+                                style={{color: '#FFFFFF' }}
                             >
                                 Contact
                             </Button>
