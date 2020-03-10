@@ -2,7 +2,6 @@ import React from 'react';
 import MainPage from './Pages/MainPage';
 import AboutPage from './Pages/AboutPage';
 import ProjectPage from './Pages/ProjectPage';
-import RamblingsPage from './Pages/RamblingsPage';
 import ContactPage from './Pages/ContactPage';
 
 
@@ -20,8 +19,7 @@ function App() {
           <Route exact={true} path='/projects' component={ProjectPage}/>>
           <Route exact={true} path='/' component={MainPage}/>
           <Route exact={true} path='/about' component={AboutPage}/>
-            <Route exact={true} path='/ramblings' component={RamblingsPage}/>
-            <Route exact={true} path='/contact' component={ContactPage}/>
+          <Route exact={true} path='/contact' component={ContactPage}/>
         </Switch>
       </Router>
   );
