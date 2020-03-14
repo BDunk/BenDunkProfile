@@ -79,8 +79,8 @@ function TopBar(props) {
                                 onClose={handleClose}
                             >
                                 <MenuItem onClick={handleClose}>Drone</MenuItem>
-                                <MenuItem onClick={handleClose}>Lorem</MenuItem>
-                                <MenuItem onClick={handleClose}>Ipsum</MenuItem>
+                                <MenuItem onClick={handleClose}>Music</MenuItem>
+
                             </Menu>
                         </div>
                         <div className={classes.menu_bar_item}>
