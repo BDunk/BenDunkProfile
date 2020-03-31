@@ -38,6 +38,18 @@ function TopBar(props) {
         setAnchorEl(null);
     };
 
+    const drone = () => {
+        setAnchorEl(null);
+        props.history.push('/projects/drone')
+    };
+
+    const music = () => {
+        setAnchorEl(null);
+        props.history.push('/projects/music')
+    };
+
+
+
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -89,8 +101,8 @@ function TopBar(props) {
                                 open={Boolean(anchorEl)}
                                 onClose={handleClose}
                             >
-                                <MenuItem onClick={handleClose}>Drone</MenuItem>
-                                <MenuItem onClick={handleClose}>Music</MenuItem>
+                                <MenuItem onClick={drone}>Drone</MenuItem>
+                                <MenuItem onClick={music}>Music</MenuItem>
 
                             </Menu>
                         </div>
