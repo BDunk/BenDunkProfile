@@ -5,7 +5,7 @@ import ProjectPage from './Pages/ProjectPage';
 import DronePage from './Pages/Projects/DronePage'
 import MusicPage from './Pages/Projects/MusicPage'
 import ContactPage from './Pages/ContactPage';
-
+//TODO: projects page doesn't exist, and may never exist, consider removing it
 
 import {
   BrowserRouter as Router,
