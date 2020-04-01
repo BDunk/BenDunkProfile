@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
 import AppBar from '@material-ui/core/AppBar';
-import Menu from '@material-ui/core/Menu';
+import ProjectMenu from './TopBar';
+import StyledButton from "./StyledButton";
 import MenuItem from '@material-ui/core/MenuItem';
 import {Toolbar, Button} from "@material-ui/core";
 import {makeStyles} from '@material-ui/core/styles';
@@ -28,15 +29,13 @@ const useStyles = makeStyles(theme => ({
 function TopBar(props) {
     console.log(`Props are ${JSON.stringify(props)}`);
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+
 
     const handleClick = event => {
         setAnchorEl(event.currentTarget);
     };
 
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+
 
     const drone = () => {
         setAnchorEl(null);
@@ -60,21 +59,11 @@ function TopBar(props) {
                 >
                     <Toolbar>
                         <div className={classes.title}>
-                            <Button
-                                onClick = {() => props.history.push('/')}
-                                style={{ fontSize: '20px', color: '#FFFFFF' }}
-                            >
-                                Ben Dunk
-                            </Button>
+                            <StyledButton destination={'/'} label={'Ben Dunk'} />
                         </div>
 
                         <div className={classes.menu_bar_item}>
-                            <Button
-                                onClick = {() => props.history.push('/about')}
-                                style={{color: '#FFFFFF' }}
-                            >
-                                About
-                            </Button>
+                          <StyledButton destination={'/about'} label={'About'} />
                         </div>
                         <div className={classes.menu_bar_item}>
                             <Button
@@ -83,28 +72,10 @@ function TopBar(props) {
                             >
                                 Projects
                             </Button>
-                            <Menu
-                                id="simple-menu"
-                                anchorEl={anchorEl}
-                                elevation={0}
-                                getContentAnchorEl={null}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'center',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'center',
-                                }}
-                                variant="contained"
-                                keepMounted
-                                open={Boolean(anchorEl)}
-                                onClose={handleClose}
-                            >
+                            <ProjectMenu>
                                 <MenuItem onClick={drone}>Drone</MenuItem>
                                 <MenuItem onClick={music}>Music</MenuItem>
-
-                            </Menu>
+                            </ProjectMenu>
                         </div>
                         <div className={classes.menu_bar_item}>
                             <Button
