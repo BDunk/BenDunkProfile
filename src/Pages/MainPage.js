@@ -9,9 +9,17 @@ const useStyles = makeStyles(theme => ({
     root: {
     },
     photo: {
-        marginLeft: "15px",
-        marginRight: "25px",
+        width: "25%",
+        maxWidth: "250px",
+        display: "inline-block",
     },
+    photoContainer: {
+      marginLeft: "15px",
+      marginRight: "25px",
+    },
+    inlineText: {
+      display: "inline",
+    }
 
 }));
 
@@ -23,13 +31,19 @@ function MainPage(props) {
                 <header>
                 <TopBar />
                 </header>
-                <div className={classes.photo}>
+                <div>
+                <div className={classes.photoContainer}>
                     <img
-                        
+                        className={classes.photo}
                         src={head_shot}
-                        alt="Logo"
+                        alt="Photo of Ben Dunk"
                     />
-                        My name is Ben Dunk
+                  <div className={classes.inlineText}>
+                    <p className={classes.inlineText}> This is now beside perhaps? </p>
+                  </div>
+                </div>
+
+
                 </div>
 
             </div>
