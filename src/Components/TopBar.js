@@ -84,6 +84,7 @@ function TopBar(props) {
                             >
                                 Contact
                             </Button>
+                            <StyledButton destination={'/about'} label={'About'} />
                         </div>
                     </Toolbar>
                 </AppBar>
