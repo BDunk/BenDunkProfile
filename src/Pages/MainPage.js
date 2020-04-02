@@ -36,7 +36,7 @@ function MainPage(props) {
                     <img
                         className={classes.photo}
                         src={head_shot}
-                        alt="Photo of Ben Dunk"
+                        alt="Ben Dunk"
                     />
                   <div className={classes.inlineText}>
                     <p className={classes.inlineText}> This is now beside perhaps? </p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import AppBar from '@material-ui/core/AppBar';
-import ProjectMenu from './TopBar';
+import ProjectMenu from './ProjectMenu';
 import StyledButton from "./StyledButton";
 import MenuItem from '@material-ui/core/MenuItem';
 import {Toolbar, Button} from "@material-ui/core";
@@ -27,11 +27,17 @@ const useStyles = makeStyles(theme => ({
 
 
 function TopBar(props) {
-    console.log(`Props are ${JSON.stringify(props)}`);
+  //console.log(`Props are ${JSON.stringify(props)}`);
 
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-    const handleClick = event => {
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+
+  const handleClick = event => {
         setAnchorEl(event.currentTarget);
     };
 
@@ -72,10 +78,12 @@ function TopBar(props) {
                             >
                                 Projects
                             </Button>
-                            <ProjectMenu>
+
+                            <ProjectMenu onClose={handleClose} anchorEl={anchorEl}>
                                 <MenuItem onClick={drone}>Drone</MenuItem>
                                 <MenuItem onClick={music}>Music</MenuItem>
                             </ProjectMenu>
+                            
                         </div>
                         <div className={classes.menu_bar_item}>
                             <Button

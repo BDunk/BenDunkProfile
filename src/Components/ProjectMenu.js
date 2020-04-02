@@ -2,12 +2,7 @@ import React from 'react';
 import Menu from '@material-ui/core/Menu';
 
 const ProjectMenu = (props) => {
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const {onClose, anchorEl} = props;
 
   return (
     <Menu
@@ -26,7 +21,7 @@ const ProjectMenu = (props) => {
       variant="contained"
       keepMounted
       open={Boolean(anchorEl)}
-      onClose={handleClose}
+      onClose={onClose}
     >
       {props.children}
     </Menu>
