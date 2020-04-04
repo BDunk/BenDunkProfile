@@ -9,13 +9,13 @@ const useStyles = makeStyles(theme => ({
     root: {
     },
     photo: {
-        width: "25%",
-        maxWidth: "250px",
+        width: "40%",
         display: "inline-block",
     },
     photoContainer: {
-      marginLeft: "15px",
-      marginRight: "25px",
+      marginLeft: "40px",
+      marginTop: "40px",
+      marginRight: "40px",
     },
     inlineText: {
       display: "inline",

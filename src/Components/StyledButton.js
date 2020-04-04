@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {Button} from "@material-ui/core";
+import { withRouter } from "react-router";
 
 const StyledButton = (props) => {
 
@@ -17,4 +18,4 @@ const StyledButton = (props) => {
   );
 };
 
-export default StyledButton;
+export default withRouter(StyledButton);

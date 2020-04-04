@@ -86,13 +86,7 @@ function TopBar(props) {
                             
                         </div>
                         <div className={classes.menu_bar_item}>
-                            <Button
-                                onClick = {() => props.history.push('/contact')}
-                                style={{color: '#FFFFFF' }}
-                            >
-                                Contact
-                            </Button>
-                            <StyledButton destination={'/about'} label={'About'} />
+                            <StyledButton destination={'/contact'} label={'Contact'} />
                         </div>
                     </Toolbar>
                 </AppBar>
